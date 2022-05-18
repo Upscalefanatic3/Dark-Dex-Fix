@@ -4420,6 +4420,7 @@ end
 CMDs = {}
 CMDs[#CMDs + 1] = {NAME = 'discord / support / help', DESC = 'Invite to the Infinite Yield support server.'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
+CMDs[#CMDs + 1] = {NAME = 'games', DESC = 'Allows you to view all universes connected to the current game'}
 CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX explorer'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens FrostHook Spy'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
@@ -6788,6 +6789,11 @@ addcmd('serverinfo',{'info','sinfo'},function(args, speaker)
 			wait(1)
 		until SINFOGUI.Parent == nil
 	end)
+end)
+
+addcmd('games',{},function(args, speaker)
+	notify('Give it a moment to load')
+	loadstring(game:HttpGet(('https://pastebin.com/raw/C39cfVy1'),true))()
 end)
 
 addcmd('jobid',{},function(args, speaker)
